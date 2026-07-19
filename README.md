@@ -5,6 +5,8 @@ Caskoin is a responsive static landing page for a digital currency brand. The si
 ## Files
 
 - `index.html` — page structure and content sections.
+- `whitepaper.html` — complete Web3-styled CASKOIN whitepaper page with a downloadable Markdown link.
+- `WHITEPAPER.md` — downloadable Markdown version of the CASKOIN whitepaper.
 - `styles.css` — visual design, layout, and responsive behavior.
 
 ## Local preview
