@@ -7,6 +7,13 @@
       name="description"
       content="Caskoin is a modern digital finance landing page for fast, secure, and accessible crypto payments."
     />
+    <meta name="theme-color" content="#080b17" />
+    <meta property="og:title" content="Caskoin | Digital money made effortless" />
+    <meta
+      property="og:description"
+      content="Move digital value quickly with a secure, transparent, and accessible crypto payments experience."
+    />
+    <meta property="og:type" content="website" />
     <title>Caskoin | Digital money made effortless</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,13 +22,14 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
       <nav class="nav" aria-label="Primary navigation">
-        <img src="assets/logo.png" alt="CASKOIN Logo" width="50">
         <a class="brand" href="#top" aria-label="Caskoin home">
-          <span class="brand-mark">C</span>
+          <span class="brand-mark" aria-hidden="true">C</span>
           <span>Caskoin</span>
         </a>
         <div class="nav-links">
@@ -34,11 +42,11 @@
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero section-shell">
+    <main id="main-content">
+      <section id="top" class="hero section-shell" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Digital value, built for everyone</p>
-          <h1>Move money at internet speed with Caskoin.</h1>
+          <h1 id="hero-title">Move money at internet speed with Caskoin.</h1>
           <p class="hero-text">
             Caskoin is a polished web experience for a next-generation digital
             currency brand: clear messaging, modern visuals, responsive layouts,
@@ -49,7 +57,7 @@
             <a class="button secondary" href="whitepaper.html">Read whitepaper</a>
           </div>
         </div>
-        <div class="hero-card" aria-label="Caskoin account preview">
+        <div class="hero-card" role="img" aria-label="Caskoin account preview showing a 42,580 CASK balance, positive growth, fast transfers, and low fees">
           <div class="card-topline">
             <span>Portfolio balance</span>
             <strong>+18.4%</strong>
@@ -71,34 +79,34 @@
         </div>
       </section>
 
-      <section id="features" class="features section-shell">
+      <section id="features" class="features section-shell" aria-labelledby="features-title">
         <div class="section-heading">
           <p class="eyebrow">Why Caskoin</p>
-          <h2>A clean foundation for a credible crypto presence.</h2>
+          <h2 id="features-title">A clean foundation for a credible crypto presence.</h2>
         </div>
         <div class="feature-grid">
           <article class="feature-card">
-            <span class="icon">⚡</span>
+            <span class="icon" aria-hidden="true">⚡</span>
             <h3>Fast onboarding</h3>
             <p>Create a focused first impression with a landing page that explains the product quickly and clearly.</p>
           </article>
           <article class="feature-card">
-            <span class="icon">🔒</span>
+            <span class="icon" aria-hidden="true">🔒</span>
             <h3>Trust-forward design</h3>
             <p>Security, transparency, and reliability are highlighted throughout the page to build confidence.</p>
           </article>
           <article class="feature-card">
-            <span class="icon">📱</span>
+            <span class="icon" aria-hidden="true">📱</span>
             <h3>Responsive by default</h3>
             <p>The layout adapts smoothly from mobile screens to large desktop displays with no framework required.</p>
           </article>
         </div>
       </section>
 
-      <section id="security" class="security section-shell">
+      <section id="security" class="security section-shell" aria-labelledby="security-title">
         <div>
           <p class="eyebrow">Security principles</p>
-          <h2>Built around clarity, control, and confidence.</h2>
+          <h2 id="security-title">Built around clarity, control, and confidence.</h2>
           <p>
             The Caskoin site presents a professional product story with strong
             calls to action, visual hierarchy, and messaging that can grow with
@@ -112,10 +120,10 @@
         </ul>
       </section>
 
-      <section id="roadmap" class="roadmap section-shell">
+      <section id="roadmap" class="roadmap section-shell" aria-labelledby="roadmap-title">
         <div class="section-heading">
           <p class="eyebrow">Roadmap</p>
-          <h2>Launch-ready now, easy to extend later.</h2>
+          <h2 id="roadmap-title">Launch-ready now, easy to extend later.</h2>
         </div>
         <div class="timeline">
           <div><strong>01</strong><span>Publish landing page</span></div>
@@ -124,13 +132,14 @@
         </div>
       </section>
 
-      <section id="signup" class="cta section-shell">
+      <section id="signup" class="cta section-shell" aria-labelledby="signup-title">
         <p class="eyebrow">Stay in the loop</p>
-        <h2>Be first to hear what Caskoin builds next.</h2>
-        <form class="signup-form">
+        <h2 id="signup-title">Be first to hear what Caskoin builds next.</h2>
+        <form class="signup-form" data-signup-form>
           <label class="sr-only" for="email">Email address</label>
-          <input id="email" type="email" placeholder="you@example.com" required />
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
           <button class="button primary" type="submit">Join waitlist</button>
+          <p class="form-message" data-form-message aria-live="polite"></p>
         </form>
       </section>
     </main>
