@@ -22,7 +22,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js"></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -39,6 +39,17 @@
           <a href="whitepaper.html">Whitepaper</a>
         </div>
         <a class="nav-cta" href="whitepaper.html">Whitepaper</a>
+        <div class="wallet-menu" data-wallet-menu>
+          <div class="wallet-status" aria-live="polite">
+            <span class="wallet-status-dot" data-wallet-status-dot aria-hidden="true"></span>
+            <span data-wallet-status-text>Not Connected</span>
+          </div>
+          <button class="wallet-connect" type="button" data-wallet-connect aria-haspopup="true" aria-expanded="false">Connect Wallet</button>
+          <div class="wallet-dropdown" data-wallet-dropdown role="menu" aria-label="Wallet options">
+            <div class="wallet-options" data-wallet-options></div>
+            <button class="wallet-disconnect" type="button" data-wallet-disconnect hidden>Disconnect</button>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -143,6 +154,8 @@
         </form>
       </section>
     </main>
+
+    <div class="toast-region" data-toast-region aria-live="polite" aria-atomic="true"></div>
 
     <footer class="footer">
       <p>© 2026 Caskoin. All rights reserved.</p>
