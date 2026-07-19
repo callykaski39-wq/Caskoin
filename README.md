@@ -6,6 +6,7 @@ Caskoin is a responsive static landing page for a digital currency brand. The si
 
 - `index.html` — page structure and content sections.
 - `styles.css` — visual design, layout, and responsive behavior.
+- `script.js` — lightweight waitlist form enhancement for static hosting.
 
 ## Local preview
 
